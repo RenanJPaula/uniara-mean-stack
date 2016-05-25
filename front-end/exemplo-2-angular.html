@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="cesta-de-compra">
+  <head>
+    <meta charset="utf-8">
+    <title>Exemplo 2</title>
+  </head>
+  <body ng-controller="CestaController" ng-init="init()">
+
+    <h1>Cesta de compras</h1>
+
+    <form ng-submit="salvar()">
+      <label>Name:</label>
+      <input type="text" required ng-model="item.nome">
+      <button type="submit">Add</button>
+    </form>
+
+    <h2>Itens:</h2>
+
+    <ul>
+      <li ng-repeat="item in itens">
+        {{item.nome}}
+      </li>
+    </ul>
+
+    <script src="js/assets/angular.min.js" charset="utf-8"></script>
+    <script src="js/exemplo-2-angular.js" charset="utf-8"></script>
+  </body>
+</html>
